@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:pym.inp.aycregimen.cl" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:pym.inp.aycregimen.cl" xmlns:intf="urn:pym.inp.aycregimen.cl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="urn:pym.inp.aycregimen.cl" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="proc_elegibilidad_sps">
+    <complexType>
+     <sequence>
+      <element name="Run" type="xsd:int"/>
+      <element name="Fecha_Consulta" type="xsd:int"/>
+      <element name="Puntaje" type="xsd:int"/>
+      <element name="C_Usuario" type="xsd:int"/>
+      <element name="Puntaje_fps" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="proc_elegibilidad_spsResponse">
+    <complexType>
+     <sequence>
+      <element name="Fecha_Consulta" type="xsd:int"/>
+      <element name="Codigo_Error" type="xsd:int"/>
+      <element name="Texto_Error" type="xsd:string"/>
+      <element name="Apellido_Paterno" type="xsd:string"/>
+      <element name="Apellido_Materno" type="xsd:string"/>
+      <element name="Nombres" type="xsd:string"/>
+      <element name="Fecha_Nacimiento" type="xsd:int"/>
+      <element name="Sexo" type="xsd:string"/>
+      <element name="Nacionalidad" type="xsd:string"/>
+      <element name="Fecha_Defuncion" type="xsd:string"/>
+      <element name="Tipo_Beneficio_Postulacion" type="xsd:int"/>
+      <element name="Codigo_Elegibilidad" type="xsd:string"/>
+      <element name="Fecha_Base" type="xsd:int"/>
+      <element name="Estado_Previsional" type="xsd:int"/>
+      <element name="Pension_Base_Total" type="xsd:int"/>
+      <element name="Complemento_Solidario" type="xsd:int"/>
+      <element name="Pension_Final" type="xsd:int"/>
+      <element name="Pensiones_Pagadas_Totales" type="xsd:int"/>
+      <element name="Derecho_Pension_Dl3500" type="xsd:int"/>
+      <element name="Derecho_Pension_Inp" type="xsd:int"/>
+      <element name="Derecho_Pension_Ffaa" type="xsd:int"/>
+      <element name="Derecho_Pension_Mutual" type="xsd:int"/>
+      <element name="Pafe_Rp_Uf" type="xsd:double"/>
+      <element name="Pafe_Rv_Uf" type="xsd:double"/>
+      <element name="Pafe_Inp" type="xsd:int"/>
+      <element name="Sobrev_Rp_Uf" type="xsd:double"/>
+      <element name="Sobrev_Rv_Uf" type="xsd:double"/>
+      <element name="Sobrev_Inp" type="xsd:int"/>
+      <element name="Sobrev_Mutuales" type="xsd:int"/>
+      <element name="Saldo_Cero" type="xsd:int"/>
+      <element name="Derecho_Faj" type="xsd:int"/>
+      <element name="Pension_Base_Dl3500" type="xsd:int"/>
+      <element name="Pension_Base_Inp" type="xsd:int"/>
+      <element name="Pension_Base_Mutuales" type="xsd:int"/>
+      <element name="Pensiones_Gracia" type="xsd:int"/>
+      <element name="Pensiones_Leyes_Especiales" type="xsd:int"/>
+      <element name="Pensiones_Pagadas_Dl3500" type="xsd:int"/>
+      <element name="Pensiones_Pagadas_Dl3500_Uf" type="xsd:double"/>
+      <element name="Monto_Garantia_Estatal" type="xsd:int"/>
+      <element name="Codigo_Tipo_Pension_Dl3500" type="xsd:int"/>
+      <element name="Codigo_Tipo_Modalidad_Dl3500" type="xsd:int"/>
+      <element name="Tiempo_Cotizado" type="xsd:int"/>
+      <element name="Rut_Afp_Afiliacion" type="xsd:int"/>
+      <element name="Fecha_Primera_Pension" type="xsd:int"/>
+      <element name="Meses_Ajuste_Pm" type="xsd:int"/>
+      <element name="Tipo_Pensionado" type="xsd:int"/>
+      <element name="Codigo_Beneficio_Final" type="xsd:int"/>
+      <element name="Monto_Neto_Beneficio" type="xsd:int"/>
+      <element name="Tipo_Entidad_Pagadora" type="xsd:int"/>
+      <element name="Codigo_Entidad_Pagadora" type="xsd:int"/>
+      <element name="Acreditado_Invalidez" type="xsd:int"/>
+      <element name="Fecha_Acreditacion_Invalidez" type="xsd:int"/>
+      <element name="Tipo_Invalidez" type="xsd:int"/>
+      <element name="Puntaje_Test_Afluencia" type="xsd:int"/>
+      <element name="Aporte_Salud" type="xsd:int"/>
+      <element name="Valor_Uf" type="xsd:double"/>
+      <element name="Datos_Solicitante_Xml" type="xsd:string"/>
+      <element name="Puntaje_Mideplan_FPS" type="xsd:int"/>
+      <element name="Puntaje_Mideplan_PFP" type="xsd:int"/>
+      <element name="Fecha_Puntaje_Mideplan_PFP" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="proc_faj_sps">
+    <complexType>
+     <sequence>
+      <element name="Run" type="xsd:int"/>
+      <element name="C_Usuario" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="proc_faj_spsResponse">
+    <complexType>
+     <sequence>
+      <element name="Codigo_Error" type="xsd:int"/>
+      <element name="Texto_Error" type="xsd:string"/>
+      <element name="Faj" type="xsd:double"/>
+      <element name="Fecha_Carga" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="proc_situacion_actual">
+    <complexType>
+     <sequence>
+      <element name="Run" type="xsd:int"/>
+      <element name="Fecha_Consulta" type="xsd:int"/>
+      <element name="C_Usuario" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="proc_situacion_actualResponse">
+    <complexType>
+     <sequence>
+      <element name="Fecha_Consulta" type="xsd:int"/>
+      <element name="Codigo_Error" type="xsd:int"/>
+      <element name="Texto_Error" type="xsd:string"/>
+      <element name="Fecha_Defuncion" type="xsd:string"/>
+      <element name="Tipo_Beneficio_Postulacion" type="xsd:int"/>
+      <element name="Codigo_Elegibilidad" type="xsd:string"/>
+      <element name="Fecha_Base" type="xsd:int"/>
+      <element name="Estado_Previsional" type="xsd:int"/>
+      <element name="Pension_Base_Total" type="xsd:int"/>
+      <element name="Complemento_Solidario" type="xsd:int"/>
+      <element name="Pension_Final" type="xsd:int"/>
+      <element name="Pensiones_Pagadas_Totales" type="xsd:int"/>
+      <element name="Derecho_Pension_Dl3500" type="xsd:int"/>
+      <element name="Derecho_Pension_Inp" type="xsd:int"/>
+      <element name="Derecho_Pension_Ffaa" type="xsd:int"/>
+      <element name="Derecho_Pension_Mutual" type="xsd:int"/>
+      <element name="Pafe_Rf_Uf" type="xsd:double"/>
+      <element name="Pafe_Rv_Uf" type="xsd:double"/>
+      <element name="Pafe_Inp" type="xsd:int"/>
+      <element name="Sobrev_Rp_Uf" type="xsd:double"/>
+      <element name="Sobrev_Rv_Uf" type="xsd:double"/>
+      <element name="Sobrev_Inp" type="xsd:int"/>
+      <element name="Sobrev_Mutuales" type="xsd:int"/>
+      <element name="Saldo_Cero" type="xsd:int"/>
+      <element name="Derecho_Faj" type="xsd:int"/>
+      <element name="Pension_Base_Dl3500" type="xsd:int"/>
+      <element name="Pension_Base_Inp" type="xsd:int"/>
+      <element name="Pension_Base_Mutuales" type="xsd:int"/>
+      <element name="Pensiones_Gracia" type="xsd:int"/>
+      <element name="Pensiones_Leyes_Especiales" type="xsd:int"/>
+      <element name="Pensiones_Pagas_Dl3500" type="xsd:int"/>
+      <element name="Pensiones_Pagadas_Dl3500_Uf" type="xsd:double"/>
+      <element name="Monto_Garantia_Estatal" type="xsd:int"/>
+      <element name="Codigo_Tipo_Pension_Dl3500" type="xsd:int"/>
+      <element name="Codigo_Tipo_Modalidad_Dl3500" type="xsd:int"/>
+      <element name="Tiempo_Cotizado" type="xsd:int"/>
+      <element name="Rut_Afp_Afiliacion" type="xsd:int"/>
+      <element name="Fecha_Primera_Pension" type="xsd:int"/>
+      <element name="Meses_Ajuste_Pm" type="xsd:int"/>
+      <element name="Tipo_Pensionado" type="xsd:int"/>
+      <element name="Codigo_Pensionado" type="xsd:int"/>
+      <element name="Codigo_Beneficio_Final" type="xsd:int"/>
+      <element name="Monto_Neto_Beneficio" type="xsd:int"/>
+      <element name="Tipo_Entidad_Pagadora" type="xsd:int"/>
+      <element name="Codigo_Entidad_Pagadora" type="xsd:int"/>
+      <element name="Acreditado_Invalidez" type="xsd:int"/>
+      <element name="Fecha_Acreditacion_Invalidez" type="xsd:int"/>
+      <element name="Tipo_Invalidez" type="xsd:int"/>
+      <element name="Puntaje_Test_Afluencia" type="xsd:int"/>
+      <element name="Aporte_Salud" type="xsd:int"/>
+      <element name="Valor_Uf" type="xsd:double"/>
+      <element name="Datos_Solicitante_XML" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fn_elegibilidad_bph">
+    <complexType>
+     <sequence>
+      <element name="Run" type="xsd:int"/>
+      <element name="Fecha_Consulta" type="xsd:int"/>
+      <element name="Puntaje" type="xsd:int"/>
+      <element name="Beneficio_Activo" type="xsd:int"/>
+      <element name="C_Usuario" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fn_elegibilidad_bphResponse">
+    <complexType>
+     <sequence>
+      <element name="Fecha_Consulta" type="xsd:int"/>
+      <element name="Codigo_Error" type="xsd:int"/>
+      <element name="Texto_Error" type="xsd:string"/>
+      <element name="Apellido_Paterno" type="xsd:string"/>
+      <element name="Apellido_Materno" type="xsd:string"/>
+      <element name="Nombres" type="xsd:string"/>
+      <element name="Fecha_Nacimiento" type="xsd:int"/>
+      <element name="Codigo_Elegibilidad_BPH" type="xsd:string"/>
+      <element name="Estado_Previsional" type="xsd:int"/>
+      <element name="Monto_Beneficio" type="xsd:int"/>
+      <element name="Cuota_Beneficio" type="xsd:int"/>
+      <element name="Codigo_Entidad_Pagadora" type="xsd:int"/>
+      <element name="Tipo_Entidad_Pagadora" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fn_hijos_bph">
+    <complexType>
+     <sequence>
+      <element name="Run_Madre" type="xsd:int"/>
+      <element name="Fecha_Consulta" type="xsd:int"/>
+      <element name="C_Usuario" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fn_hijos_bphResponse">
+    <complexType>
+     <sequence>
+      <element name="Codigo_Error" type="xsd:int"/>
+      <element name="Texto_Error" type="xsd:string"/>
+      <element name="Hijos" type="impl:Row_of_Hijos"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Row_of_Hijos">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:Row_of_Hijos"/>
+    </sequence>
+   </complexType>
+   <element name="consulta_documentos">
+    <complexType>
+     <sequence>
+      <element name="CodTipoDocumento" type="xsd:int"/>
+      <element name="Run" type="xsd:int"/>
+      <element name="NumSerie" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="consulta_documentosResponse">
+    <complexType>
+     <sequence>
+      <element name="Codigo_Error" type="xsd:int"/>
+      <element name="Texto_Error" type="xsd:string"/>
+      <element name="Run_Persona" type="xsd:int"/>
+      <element name="Dv_Persona" type="xsd:string"/>
+      <element name="Estado" type="xsd:string"/>
+      <element name="Razon" type="xsd:string"/>
+      <element name="Fecha_Vencimiento" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="fn_hijos_bphResponse">
+
+      <wsdl:part element="impl:fn_hijos_bphResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="fn_elegibilidad_bphRequest">
+
+      <wsdl:part element="impl:fn_elegibilidad_bph" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="proc_elegibilidad_spsRequest">
+
+      <wsdl:part element="impl:proc_elegibilidad_sps" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="proc_elegibilidad_spsResponse">
+
+      <wsdl:part element="impl:proc_elegibilidad_spsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="consulta_documentosRequest">
+
+      <wsdl:part element="impl:consulta_documentos" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="proc_situacion_actualRequest">
+
+      <wsdl:part element="impl:proc_situacion_actual" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="proc_situacion_actualResponse">
+
+      <wsdl:part element="impl:proc_situacion_actualResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="proc_faj_spsRequest">
+
+      <wsdl:part element="impl:proc_faj_sps" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="consulta_documentosResponse">
+
+      <wsdl:part element="impl:consulta_documentosResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="fn_hijos_bphRequest">
+
+      <wsdl:part element="impl:fn_hijos_bph" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="proc_faj_spsResponse">
+
+      <wsdl:part element="impl:proc_faj_spsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="fn_elegibilidad_bphResponse">
+
+      <wsdl:part element="impl:fn_elegibilidad_bphResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="AyCRegimen">
+
+      <wsdl:operation name="proc_elegibilidad_sps">
+
+         <wsdl:input message="impl:proc_elegibilidad_spsRequest" name="proc_elegibilidad_spsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:proc_elegibilidad_spsResponse" name="proc_elegibilidad_spsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="proc_faj_sps">
+
+         <wsdl:input message="impl:proc_faj_spsRequest" name="proc_faj_spsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:proc_faj_spsResponse" name="proc_faj_spsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="proc_situacion_actual">
+
+         <wsdl:input message="impl:proc_situacion_actualRequest" name="proc_situacion_actualRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:proc_situacion_actualResponse" name="proc_situacion_actualResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fn_elegibilidad_bph">
+
+         <wsdl:input message="impl:fn_elegibilidad_bphRequest" name="fn_elegibilidad_bphRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:fn_elegibilidad_bphResponse" name="fn_elegibilidad_bphResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fn_hijos_bph">
+
+         <wsdl:input message="impl:fn_hijos_bphRequest" name="fn_hijos_bphRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:fn_hijos_bphResponse" name="fn_hijos_bphResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="consulta_documentos">
+
+         <wsdl:input message="impl:consulta_documentosRequest" name="consulta_documentosRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:consulta_documentosResponse" name="consulta_documentosResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AyCRegimenSOAPSoapBinding" type="impl:AyCRegimen">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="proc_elegibilidad_sps">
+
+         <wsdlsoap:operation soapAction="urn:pym.inp.aycregimen.cl/proc_elegibilidad_sps"/>
+
+         <wsdl:input name="proc_elegibilidad_spsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="proc_elegibilidad_spsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="proc_faj_sps">
+
+         <wsdlsoap:operation soapAction="urn:pym.inp.aycregimen.cl/proc_faj_sps"/>
+
+         <wsdl:input name="proc_faj_spsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="proc_faj_spsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="proc_situacion_actual">
+
+         <wsdlsoap:operation soapAction="urn:pym.inp.aycregimen.cl/proc_situacion_actual"/>
+
+         <wsdl:input name="proc_situacion_actualRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="proc_situacion_actualResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fn_elegibilidad_bph">
+
+         <wsdlsoap:operation soapAction="urn:pym.inp.aycregimen.cl/fn_elegibilidad_bph"/>
+
+         <wsdl:input name="fn_elegibilidad_bphRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="fn_elegibilidad_bphResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fn_hijos_bph">
+
+         <wsdlsoap:operation soapAction="urn:pym.inp.aycregimen.cl/fn_hijos_bph"/>
+
+         <wsdl:input name="fn_hijos_bphRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="fn_hijos_bphResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="consulta_documentos">
+
+         <wsdlsoap:operation soapAction="urn:pym.inp.aycregimen.cl/consulta_documentos"/>
+
+         <wsdl:input name="consulta_documentosRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="consulta_documentosResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AyCRegimen">
+
+      <wsdl:port binding="impl:AyCRegimenSOAPSoapBinding" name="AyCRegimenSOAP">
+
+         <wsdlsoap:address location="http://10.151.2.2:8080/AyCRegimen/services/AyCRegimenSOAP"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
